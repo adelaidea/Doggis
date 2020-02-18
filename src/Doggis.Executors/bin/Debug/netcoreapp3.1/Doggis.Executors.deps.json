@@ -1,0 +1,47 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Doggis.Executors/1.0.0": {
+        "dependencies": {
+          "Doggis.Domain": "1.0.0",
+          "Doggis.ExecutorsAbstraction": "1.0.0"
+        },
+        "runtime": {
+          "Doggis.Executors.dll": {}
+        }
+      },
+      "Doggis.Domain/1.0.0": {
+        "runtime": {
+          "Doggis.Domain.dll": {}
+        }
+      },
+      "Doggis.ExecutorsAbstraction/1.0.0": {
+        "runtime": {
+          "Doggis.ExecutorsAbstraction.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Doggis.Executors/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Doggis.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Doggis.ExecutorsAbstraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

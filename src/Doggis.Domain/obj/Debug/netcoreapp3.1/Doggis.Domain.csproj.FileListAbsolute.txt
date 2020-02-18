@@ -1,0 +1,8 @@
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Domain\bin\Debug\netcoreapp3.1\Doggis.Domain.deps.json
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Domain\bin\Debug\netcoreapp3.1\Doggis.Domain.dll
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Domain\bin\Debug\netcoreapp3.1\Doggis.Domain.pdb
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Domain\obj\Debug\netcoreapp3.1\Doggis.Domain.csprojAssemblyReference.cache
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Domain\obj\Debug\netcoreapp3.1\Doggis.Domain.AssemblyInfoInputs.cache
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Domain\obj\Debug\netcoreapp3.1\Doggis.Domain.AssemblyInfo.cs
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Domain\obj\Debug\netcoreapp3.1\Doggis.Domain.dll
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Domain\obj\Debug\netcoreapp3.1\Doggis.Domain.pdb

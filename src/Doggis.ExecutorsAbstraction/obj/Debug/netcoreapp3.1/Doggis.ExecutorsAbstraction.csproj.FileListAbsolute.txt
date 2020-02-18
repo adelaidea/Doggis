@@ -1,0 +1,7 @@
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.ExecutorsAbstraction\bin\Debug\netcoreapp3.1\Doggis.ExecutorsAbstraction.deps.json
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.ExecutorsAbstraction\bin\Debug\netcoreapp3.1\Doggis.ExecutorsAbstraction.dll
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.ExecutorsAbstraction\bin\Debug\netcoreapp3.1\Doggis.ExecutorsAbstraction.pdb
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.ExecutorsAbstraction\obj\Debug\netcoreapp3.1\Doggis.ExecutorsAbstraction.AssemblyInfoInputs.cache
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.ExecutorsAbstraction\obj\Debug\netcoreapp3.1\Doggis.ExecutorsAbstraction.AssemblyInfo.cs
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.ExecutorsAbstraction\obj\Debug\netcoreapp3.1\Doggis.ExecutorsAbstraction.dll
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.ExecutorsAbstraction\obj\Debug\netcoreapp3.1\Doggis.ExecutorsAbstraction.pdb

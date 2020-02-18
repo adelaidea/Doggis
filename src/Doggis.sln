@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.API", "Doggis.API\Doggis.API.csproj", "{B1F17081-AAD2-4606-A15B-6145BB0AFC74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.Domain", "Doggis.Domain\Doggis.Domain.csproj", "{91216932-A2E1-4F87-AAA6-E0B671893979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.Repository", "Doggis.Repository\Doggis.Repository.csproj", "{BD2A5BDD-D469-4E51-9CE6-CCFBD1D4F752}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.Test", "Doggis.Test\Doggis.Test.csproj", "{5A6A3677-1125-4F12-B2D3-E567DB830C38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.Executors", "Doggis.Executors\Doggis.Executors.csproj", "{20545165-E657-4E71-9CBE-69EB5664FC6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.ExecutorsAbstraction", "Doggis.ExecutorsAbstraction\Doggis.ExecutorsAbstraction.csproj", "{8CF92A67-8BBA-48FA-AE3B-69E390532FC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1F17081-AAD2-4606-A15B-6145BB0AFC74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1F17081-AAD2-4606-A15B-6145BB0AFC74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1F17081-AAD2-4606-A15B-6145BB0AFC74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1F17081-AAD2-4606-A15B-6145BB0AFC74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91216932-A2E1-4F87-AAA6-E0B671893979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91216932-A2E1-4F87-AAA6-E0B671893979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91216932-A2E1-4F87-AAA6-E0B671893979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91216932-A2E1-4F87-AAA6-E0B671893979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD2A5BDD-D469-4E51-9CE6-CCFBD1D4F752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD2A5BDD-D469-4E51-9CE6-CCFBD1D4F752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD2A5BDD-D469-4E51-9CE6-CCFBD1D4F752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD2A5BDD-D469-4E51-9CE6-CCFBD1D4F752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A6A3677-1125-4F12-B2D3-E567DB830C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A6A3677-1125-4F12-B2D3-E567DB830C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A6A3677-1125-4F12-B2D3-E567DB830C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A6A3677-1125-4F12-B2D3-E567DB830C38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20545165-E657-4E71-9CBE-69EB5664FC6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20545165-E657-4E71-9CBE-69EB5664FC6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20545165-E657-4E71-9CBE-69EB5664FC6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20545165-E657-4E71-9CBE-69EB5664FC6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF92A67-8BBA-48FA-AE3B-69E390532FC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF92A67-8BBA-48FA-AE3B-69E390532FC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF92A67-8BBA-48FA-AE3B-69E390532FC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF92A67-8BBA-48FA-AE3B-69E390532FC6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B691AD08-CCBC-46FD-8EF2-8CB981C4DAC4}
+	EndGlobalSection
+EndGlobal

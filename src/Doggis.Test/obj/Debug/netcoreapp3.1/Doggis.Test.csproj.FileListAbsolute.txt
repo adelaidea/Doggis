@@ -1,0 +1,11 @@
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Test\bin\Debug\netcoreapp3.1\Doggis.Test.deps.json
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Test\bin\Debug\netcoreapp3.1\Doggis.Test.dll
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Test\bin\Debug\netcoreapp3.1\Doggis.Test.pdb
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Test\bin\Debug\netcoreapp3.1\Doggis.ExecutorsAbstraction.dll
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Test\bin\Debug\netcoreapp3.1\Doggis.ExecutorsAbstraction.pdb
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Test\obj\Debug\netcoreapp3.1\Doggis.Test.csprojAssemblyReference.cache
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Test\obj\Debug\netcoreapp3.1\Doggis.Test.AssemblyInfoInputs.cache
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Test\obj\Debug\netcoreapp3.1\Doggis.Test.AssemblyInfo.cs
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Test\obj\Debug\netcoreapp3.1\Doggis.Test.csproj.CopyComplete
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Test\obj\Debug\netcoreapp3.1\Doggis.Test.dll
+C:\Users\Adelaide Antunes\Documents\TCC\Doggis\Doggis.Test\obj\Debug\netcoreapp3.1\Doggis.Test.pdb
