@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.API", "Doggis.API\Doggis.API.csproj", "{B1F17081-AAD2-4606-A15B-6145BB0AFC74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doggis.API", "Doggis.API\Doggis.API.csproj", "{B1F17081-AAD2-4606-A15B-6145BB0AFC74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.Domain", "Doggis.Domain\Doggis.Domain.csproj", "{91216932-A2E1-4F87-AAA6-E0B671893979}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doggis.Domain", "Doggis.Domain\Doggis.Domain.csproj", "{91216932-A2E1-4F87-AAA6-E0B671893979}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.Repository", "Doggis.Repository\Doggis.Repository.csproj", "{BD2A5BDD-D469-4E51-9CE6-CCFBD1D4F752}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doggis.Repository", "Doggis.Repository\Doggis.Repository.csproj", "{BD2A5BDD-D469-4E51-9CE6-CCFBD1D4F752}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.Test", "Doggis.Test\Doggis.Test.csproj", "{5A6A3677-1125-4F12-B2D3-E567DB830C38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doggis.Test", "Doggis.Test\Doggis.Test.csproj", "{5A6A3677-1125-4F12-B2D3-E567DB830C38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.Executors", "Doggis.Executors\Doggis.Executors.csproj", "{20545165-E657-4E71-9CBE-69EB5664FC6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doggis.Executors", "Doggis.Executors\Doggis.Executors.csproj", "{20545165-E657-4E71-9CBE-69EB5664FC6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.ExecutorsAbstraction", "Doggis.ExecutorsAbstraction\Doggis.ExecutorsAbstraction.csproj", "{8CF92A67-8BBA-48FA-AE3B-69E390532FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doggis.ExecutorsAbstraction", "Doggis.ExecutorsAbstraction\Doggis.ExecutorsAbstraction.csproj", "{8CF92A67-8BBA-48FA-AE3B-69E390532FC6}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Doggis.DataBase", "Doggis.DataBase\Doggis.DataBase.sqlproj", "{B4E65817-5C55-4ABE-96E9-92969D9673B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,12 @@ Global
 		{8CF92A67-8BBA-48FA-AE3B-69E390532FC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CF92A67-8BBA-48FA-AE3B-69E390532FC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CF92A67-8BBA-48FA-AE3B-69E390532FC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E65817-5C55-4ABE-96E9-92969D9673B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E65817-5C55-4ABE-96E9-92969D9673B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E65817-5C55-4ABE-96E9-92969D9673B1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B4E65817-5C55-4ABE-96E9-92969D9673B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E65817-5C55-4ABE-96E9-92969D9673B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E65817-5C55-4ABE-96E9-92969D9673B1}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
