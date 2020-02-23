@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Doggis.Domain\Doggis.Domain.csproj" />
-    <ProjectReference Include="..\Doggis.ExecutorsAbstraction\Doggis.ExecutorsAbstraction.csproj" />
   </ItemGroup>
 
 </Project>
