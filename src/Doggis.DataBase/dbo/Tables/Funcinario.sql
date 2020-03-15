@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Funcinario] (
+﻿CREATE TABLE [dbo].[Funcionario] (
     [Id]         UNIQUEIDENTIFIER NOT NULL,
     [Nome]       VARCHAR (100)    NOT NULL,
     [IdTipo]     INT              NOT NULL,

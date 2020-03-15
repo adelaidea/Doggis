@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Doggis.Application.IoC;
+using Doggis.Application.Mapper;
 
 namespace Doggis.API
 {
@@ -30,8 +31,10 @@ namespace Doggis.API
 
             services.RegisterRepository();
             services.RegisterExecutor();
-
+            
             services.AddControllers();
+
+            services.AddAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

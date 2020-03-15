@@ -19,13 +19,26 @@ namespace Doggis.DataAccess.Repository
 
         public virtual async Task Add(TEntity entity)
         {
-            _dbContext.Set<TEntity>().Add(entity);
+            _dbContext.Add(entity);
             await _dbContext.SaveChangesAsync();
         }
 
-        public virtual async Task Delete(Guid id)
+
+        public virtual async Task AddRange(IEnumerable<TEntity> entities)
         {
-            throw new NotImplementedException();
+            foreach (var entity in entities)
+            {
+                _dbContext.Add(entity);
+            }
+
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public virtual async Task Delete(object id)
+        {
+            var entity = await Get(id);
+            _dbContext.Remove(entity);
+            await _dbContext.SaveChangesAsync();
         }
 
         public virtual async Task<IEnumerable<TEntity>> Find(System.Linq.Expressions.Expression<Func<TEntity, bool>> predicate)
@@ -33,7 +46,7 @@ namespace Doggis.DataAccess.Repository
             throw new NotImplementedException();
         }
 
-        public virtual async Task<TEntity> Get(Guid id)
+        public virtual async Task<TEntity> Get(object id)
         {
             return await _dbContext.Set<TEntity>().FindAsync(id);
         }
@@ -45,7 +58,9 @@ namespace Doggis.DataAccess.Repository
 
         public virtual async Task Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Entry(entity).State = EntityState.Modified;
+            
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

@@ -8,6 +8,6 @@
     [FuncionarioAlteracao] UNIQUEIDENTIFIER NOT NULL,
     [PontosRealizacao]     INT              NULL,
     CONSTRAINT [PK_SERVICO] PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_SERVICO_REFERENCE_FUNCINAR] FOREIGN KEY ([FuncionarioAlteracao]) REFERENCES [dbo].[Funcinario] ([Id])
+    CONSTRAINT [FK_SERVICO_REFERENCE_FUNCINAR] FOREIGN KEY ([FuncionarioAlteracao]) REFERENCES [dbo].[Funcionario] ([Id])
 );
 

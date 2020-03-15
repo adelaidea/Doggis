@@ -1,9 +1,12 @@
 ﻿CREATE TABLE [dbo].[Produto] (
-    [Id]             UNIQUEIDENTIFIER NOT NULL,
+    [Codigo]             BIGINT NOT NULL,
     [Nome]           VARCHAR (100)    NOT NULL,
     [Especificacoes] VARCHAR (MAX)    NOT NULL,
     [Preco]          DECIMAL (6, 2)     NOT NULL,
     [ParaVenda]      BIT              NOT NULL,
-    CONSTRAINT [PK_PRODUTO] PRIMARY KEY CLUSTERED ([Id] ASC)
+    [Quantidade] INT NOT NULL DEFAULT 0, 
+    [IdFabricante] UNIQUEIDENTIFIER NULL, 
+    CONSTRAINT [PK_PRODUTO] PRIMARY KEY CLUSTERED ([Codigo] ASC),    
+    CONSTRAINT [FK_PRODUTO_FABRICANTE] FOREIGN KEY ([IdFabricante]) REFERENCES [dbo].[Fabricante] ([Id])
 );
 

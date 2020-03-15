@@ -10,11 +10,13 @@ namespace Doggis.Domain.IRepository
     {
         Task Add(TEntity entity);
 
+        Task AddRange(IEnumerable<TEntity> entities);
+
         Task Update(TEntity entity);
 
-        Task Delete(Guid id);
+        Task Delete(object id);
 
-        Task<TEntity> Get(Guid id);
+        Task<TEntity> Get(object id);
 
         Task<IEnumerable<TEntity>> GetAll();
 

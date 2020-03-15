@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Fabricante]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [Nome] VARCHAR(100) NOT NULL
+)

@@ -74,8 +74,16 @@
     <Build Include="dbo\Tables\Funcinario.sql" />
     <Build Include="dbo\Tables\FunacionarioServico.sql" />
     <Build Include="dbo\Tables\Cliente.sql" />
-    <Build Include="dbo\Tables\Alergias.sql" />
+    <Build Include="dbo\Tables\Alergia.sql" />
     <Build Include="dbo\Tables\AlergiaPet.sql" />
     <Build Include="dbo\Tables\AgendaServico.sql" />
+    <Build Include="dbo\Tables\Venda.sql" />
+    <Build Include="dbo\Tables\Fabricante.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Doggis.DataBase.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Doggis.DataBase.refactorlog" />
   </ItemGroup>
 </Project>

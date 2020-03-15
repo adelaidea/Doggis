@@ -9,7 +9,7 @@
     [Pontos]         INT              NOT NULL,
     [Cancelado]      BIT              NOT NULL,
     CONSTRAINT [FK_AGENDASE_REFERENCE_CLIENTE] FOREIGN KEY ([IdCliente]) REFERENCES [dbo].[Cliente] ([Id]),
-    CONSTRAINT [FK_AGENDASE_REFERENCE_FUNCINAR] FOREIGN KEY ([IdFuncionario]) REFERENCES [dbo].[Funcinario] ([Id]),
+    CONSTRAINT [FK_AGENDASE_REFERENCE_FUNCINAR] FOREIGN KEY ([IdFuncionario]) REFERENCES [dbo].[Funcionario] ([Id]),
     CONSTRAINT [FK_AGENDASE_REFERENCE_PET] FOREIGN KEY ([IdPet]) REFERENCES [dbo].[Pet] ([Id]),
     CONSTRAINT [FK_AGENDASE_REFERENCE_PROMOCAO] FOREIGN KEY ([CodigoPromocao]) REFERENCES [dbo].[Promocao] ([Codigo]),
     CONSTRAINT [FK_AGENDASE_REFERENCE_SERVICO] FOREIGN KEY ([IdServico]) REFERENCES [dbo].[Servico] ([Id])
