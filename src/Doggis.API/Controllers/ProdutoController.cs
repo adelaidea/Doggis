@@ -20,14 +20,16 @@ namespace Doggis.API.Controllers
         private readonly IExecutor<EditarProdutoParameter, EditarProdutoResult> _editarProdutoExecutor;
         private readonly IExecutor<RemoverProdutoParameter, RemoverProdutoResult> _removerProdutoExecutor;
         private readonly IExecutor<EditarPrecoProdutoParameter, EditarPrecoProdutoResult> _editarPrecoProdutoExecutor;
-        private readonly IExecutor<EditarQuantidadeProdutoParameter, EditarQuantidadeProdutoResult> _editarQuantidadeProdutoExecutor;
+        private readonly IExecutor<AtualizarEstoqueProdutoParameter, AtualizarEstoqueProdutoResult> _editarQuantidadeProdutoExecutor;
+        private readonly IExecutor<VendaParameter, VendaResult> _vendaExecutor;
 
         public ProdutoController(IExecutor<ListarProdutoParameter, ListarProdutoResult> listarProdutoExecutor,
                                     IExecutor<IncluirProdutoParameter, IncluirProdutoResult> incluirProdutoExecutor,
                                     IExecutor<EditarProdutoParameter, EditarProdutoResult> editarProdutoExecutor,
                                     IExecutor<RemoverProdutoParameter, RemoverProdutoResult> removerProdutoExecutor,
                                     IExecutor<EditarPrecoProdutoParameter, EditarPrecoProdutoResult> editarPrecoProdutoExecutor,
-                                    IExecutor<EditarQuantidadeProdutoParameter, EditarQuantidadeProdutoResult> editarQuantidadeProdutoExecutor)
+                                    IExecutor<AtualizarEstoqueProdutoParameter, AtualizarEstoqueProdutoResult> editarQuantidadeProdutoExecutor,
+                                    IExecutor<VendaParameter, VendaResult> vendaExecutor)
         {
             _listarProdutoExecutor = listarProdutoExecutor;
             _incluirProdutoExecutor = incluirProdutoExecutor;
@@ -35,6 +37,7 @@ namespace Doggis.API.Controllers
             _removerProdutoExecutor = removerProdutoExecutor;
             _editarPrecoProdutoExecutor = editarPrecoProdutoExecutor;
             _editarQuantidadeProdutoExecutor = editarQuantidadeProdutoExecutor;
+            _vendaExecutor = vendaExecutor;
         }
 
         [HttpGet]
@@ -113,7 +116,7 @@ namespace Doggis.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> EditarQuantidade(EditarQuantidadeProdutoParameter parameter)
+        public async Task<IActionResult> EditarQuantidade(AtualizarEstoqueProdutoParameter parameter)
         {
             try
             {
@@ -128,10 +131,12 @@ namespace Doggis.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> RegistrarVenda() 
+        public async Task<IActionResult> RegistrarVenda(VendaParameter parameter) 
         {
             try
             {
+                await _vendaExecutor.Execute(parameter);
+
                 return Ok();
             }
             catch (Exception ex)

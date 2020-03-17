@@ -18,6 +18,7 @@ namespace Doggis.DataAccess.Context
         public DbSet<Alergia> Alergia { get; set; }
         public DbSet<Funcionario> Funcionario { get; set; }
         public DbSet<Produto> Produto { get; set; }
+        public DbSet<Venda> Venda { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

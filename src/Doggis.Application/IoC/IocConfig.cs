@@ -20,6 +20,7 @@ namespace Doggis.Application.IoC
         {
             services.AddScoped<IClienteRepository, ClienteRepository>();
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            services.AddScoped<IVendaRepository, VendaRepository>();
         }
 
         public static void RegisterExecutor(this IServiceCollection services)
@@ -32,8 +33,9 @@ namespace Doggis.Application.IoC
             services.AddScoped<IExecutor<EditarProdutoParameter, EditarProdutoResult>, EditarProdutoExecutor>();
             services.AddScoped<IExecutor<RemoverProdutoParameter, RemoverProdutoResult>, RemoverProdutoExecutor>();
             services.AddScoped<IExecutor<ObterProdutoParameter, ObterProdutoResult>, ObterProdutoExecutor>();
-            services.AddScoped<IExecutor<EditarQuantidadeProdutoParameter, EditarQuantidadeProdutoResult>, EditarQuantidadeProdutoExecutor>();
+            services.AddScoped<IExecutor<AtualizarEstoqueProdutoParameter, AtualizarEstoqueProdutoResult>, AtualizarEstoqueProdutoExecutor>();
             services.AddScoped<IExecutor<EditarPrecoProdutoParameter, EditarPrecoProdutoResult>, EditarPrecoProdutoExecutor>();
+            services.AddScoped<IExecutor<VendaParameter, VendaResult>, VendaExecutor>();
         }
 
         public static void AddDoggisContext(this IServiceCollection services, IConfiguration Configuration)

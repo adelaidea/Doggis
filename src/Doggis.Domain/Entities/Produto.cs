@@ -20,6 +20,8 @@ namespace Doggis.Domain.Entities
         public bool ParaVenda { get; set; }
 
         public int Quantidade { get; set; }
+
+        public Guid IdFabricante { get; set; }
     }
 
     public static class HelperRadom

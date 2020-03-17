@@ -9,6 +9,7 @@ namespace Doggis.Application.Mapper.Profiles
         public ModelToEntity()
         {
             CreateMap<ProdutoModel, Produto>();
+            CreateMap<ItemVendaModel, ItemVenda>();
         }
     }
 }
