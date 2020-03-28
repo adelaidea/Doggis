@@ -15,7 +15,6 @@ namespace Doggis.DataAccess.Config
             builder.Property(x => x.Id).IsRequired();
             builder.Property(x => x.IdCliente).IsRequired();
             builder.Property(x => x.IdRaca).IsRequired();
-            builder.Property(x => x.IdTipoPet).IsRequired();
             builder.Property(x => x.Nome).IsRequired();
             builder.Property(x => x.Observacoes);
             builder.Property(x => x.PermiteDivulgacao).IsRequired();
@@ -24,10 +23,6 @@ namespace Doggis.DataAccess.Config
             builder.HasOne(x => x.Raca)
                     .WithMany()
                     .HasForeignKey(x=>x.IdRaca);
-
-            builder.HasOne(x => x.TipoPet)
-                    .WithMany()
-                    .HasForeignKey(x => x.IdTipoPet);
         }
     }
 }

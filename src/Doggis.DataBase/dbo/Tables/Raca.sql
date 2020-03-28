@@ -1,6 +1,8 @@
 ﻿CREATE TABLE [dbo].[Raca] (
-    [Id]   INT           NOT NULL,
+    [Id]   INT    IDENTITY(1,1)       NOT NULL,
     [Nome] VARCHAR (100) NOT NULL,
-    CONSTRAINT [PK_RACA] PRIMARY KEY CLUSTERED ([Id] ASC)
+    [TipoPetId] INT NOT NULL, 
+    CONSTRAINT [PK_RACA] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_TIPO_PET_RACA] FOREIGN KEY (TipoPetId) REFERENCES [dbo].TipoPet (Id)
 );
 

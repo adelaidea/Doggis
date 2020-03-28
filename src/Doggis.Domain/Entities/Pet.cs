@@ -5,12 +5,7 @@ namespace Doggis.Domain.Entities
 {
     public class Pet : EntityBase
     {
-        public Pet()
-        { }
-
         public Guid Id { get; protected set; }
-
-        public int IdTipoPet { get; set; }
 
         public int IdRaca { get; set; }
 

@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doggis.Application", "Doggi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Doggis.DataAccess", "Doggis.DataAccess\Doggis.DataAccess.csproj", "{7507F688-DCEF-43CC-A851-E3E59988B2DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doggis.Web", "Doggis.Web\Doggis.Web.csproj", "{BD3F2392-321D-427A-A9DD-0D2473C66CC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{7507F688-DCEF-43CC-A851-E3E59988B2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7507F688-DCEF-43CC-A851-E3E59988B2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7507F688-DCEF-43CC-A851-E3E59988B2DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD3F2392-321D-427A-A9DD-0D2473C66CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3F2392-321D-427A-A9DD-0D2473C66CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3F2392-321D-427A-A9DD-0D2473C66CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3F2392-321D-427A-A9DD-0D2473C66CC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

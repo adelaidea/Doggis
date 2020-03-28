@@ -3,11 +3,14 @@ using Doggis.DataAccess.Repository;
 using Doggis.Domain.IRepository;
 using Doggis.Executors.Cliente;
 using Doggis.Executors.Produto;
+using Doggis.Executors.Servico;
 using Doggis.ExecutorsAbstraction.Abstraction;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Parameters.Cliente;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Parameters.Produto;
+using Doggis.ExecutorsAbstraction.ExecutorsTypes.Parameters.Servico;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Results.Cliente;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Results.Produto;
+using Doggis.ExecutorsAbstraction.ExecutorsTypes.Results.Servico;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,6 +24,7 @@ namespace Doggis.Application.IoC
             services.AddScoped<IClienteRepository, ClienteRepository>();
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
             services.AddScoped<IVendaRepository, VendaRepository>();
+            services.AddScoped<IServicoRepository, ServicoRepository>();
         }
 
         public static void RegisterExecutor(this IServiceCollection services)
@@ -36,6 +40,8 @@ namespace Doggis.Application.IoC
             services.AddScoped<IExecutor<AtualizarEstoqueProdutoParameter, AtualizarEstoqueProdutoResult>, AtualizarEstoqueProdutoExecutor>();
             services.AddScoped<IExecutor<EditarPrecoProdutoParameter, EditarPrecoProdutoResult>, EditarPrecoProdutoExecutor>();
             services.AddScoped<IExecutor<VendaParameter, VendaResult>, VendaExecutor>();
+            services.AddScoped<IExecutor<AgendarServicoParameter, AgendarServicoResult>, AgendarServicoExecutor>();
+            services.AddScoped<IExecutor<ObterServicosAgendadosParameter, ObterServicosAgendadosResult>, ObterServicosAgendadosExecutor>();
         }
 
         public static void AddDoggisContext(this IServiceCollection services, IConfiguration Configuration)

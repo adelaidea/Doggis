@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Doggis.Domain.Entities;
 using Doggis.ExecutorsAbstraction.Model.Produto;
+using Doggis.ExecutorsAbstraction.Model.Servico;
 
 namespace Doggis.Application.Mapper.Profiles
 {
@@ -10,6 +11,7 @@ namespace Doggis.Application.Mapper.Profiles
         {
             CreateMap<ProdutoModel, Produto>();
             CreateMap<ItemVendaModel, ItemVenda>();
+            CreateMap<AgendaServicoModel, AgendaServico>();
         }
     }
 }
