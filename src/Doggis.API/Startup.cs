@@ -31,7 +31,9 @@ namespace Doggis.API
 
             services.RegisterRepository();
             services.RegisterExecutor();
-            
+
+            services.AddCors();
+
             services.AddControllers();
 
             services.AddAutoMapper();
@@ -57,6 +59,8 @@ namespace Doggis.API
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(option => option.AllowAnyOrigin());
 
             app.UseEndpoints(endpoints =>
             {

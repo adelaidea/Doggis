@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Doggis.ExecutorsAbstraction.Abstraction;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Parameters.Produto;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Results.Produto;
 using Doggis.ExecutorsAbstraction.Model.Produto;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Doggis.API.Controllers

@@ -1,0 +1,29 @@
+﻿@page
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<div class="card">
+    <div class="card-header"><strong>Produtos</strong> Lista</div>
+    <div class="card-body">
+        <div class="header-button">
+            <button class="btn btn-sm btn-secondary" type="button" onclick="location.href = '/produto/create';">Novo</button>
+        </div>
+        <table class="table table-responsive-sm" id="produto-lista">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Código</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/pages/produto/index.js"></script>
+}

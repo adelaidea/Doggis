@@ -1,0 +1,41 @@
+﻿@page
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<div class="card">
+    <div class="card-header"><strong>Produto</strong> Editar</div>
+    <div class="card-body">
+        <form action="" method="post">
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label>Nome</label>
+                    <input class="form-control" type="text" placeholder="Nome" />
+                </div>
+                <div class="form-group col-sm-6">
+                    <label>Fabricante</label>
+                    <input class="form-control" type="text" placeholder="Fabricante" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label>Preço</label>
+                    <input class="form-control" type="text" placeholder="Preço" />
+                </div>
+                <div class="form-group col-sm-6">
+                    <label>Quantidade</label>
+                    <input class="form-control" type="number" placeholder="Quantidade" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Especificações</label>
+                <input class="form-control" type="text" placeholder="Especificações" />
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-sm btn-success" type="submit"> Salvar</button>
+        <button class="btn btn-sm btn-secondary" onclick="location.href = '/produto';" type="button"> Cancelar</button>
+    </div>
+</div>
+

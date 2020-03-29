@@ -1,0 +1,53 @@
+﻿@page
+@{
+    ViewData["Title"] = "Agendar Servico";
+}
+
+<div class="card">
+    <div class="card-header"><strong>Serviço</strong> Agendar Serviço</div>
+    <div class="card-body">
+        <form action="" method="post">
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label>Cliente</label>
+                    <input class="form-control" type="text" placeholder="Cliente" />
+                </div>
+                <div class="form-group col-sm-6">
+                    <label>Pet</label>
+                    <input class="form-control" type="text" placeholder="Pet" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label>Serviço</label>
+                    <select class="form-control">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-6">
+                    <label>Profissional</label>
+                    <select class="form-control">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label>Data</label>
+                    <input class="form-control" type="date" placeholder="Data" />
+                </div>
+                <div class="form-group col-sm-6">
+                    <label>Horário</label>
+                    <select class="form-control">
+                        <option value="">Selecione</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-sm btn-success" type="submit"> Salvar</button>
+        <button class="btn btn-sm btn-primary" type="button" onclick="location.href = '/agenda';"> Cancelar</button>
+    </div>
+</div>
+
