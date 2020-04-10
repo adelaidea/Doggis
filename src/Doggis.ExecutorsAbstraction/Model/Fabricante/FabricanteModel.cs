@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Doggis.Domain.Entities
+namespace Doggis.ExecutorsAbstraction.Model.Fabricante
 {
-    public class Fabricante : EntityBase
+    public class FabricanteModel
     {
         public Guid Id { get; set; }
 

@@ -60,7 +60,9 @@ namespace Doggis.API
 
             app.UseAuthorization();
 
-            app.UseCors(option => option.AllowAnyOrigin());
+            app.UseCors(option => option.AllowAnyOrigin()
+                                        .AllowAnyMethod()
+                                        .AllowAnyHeader());
 
             app.UseEndpoints(endpoints =>
             {

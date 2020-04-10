@@ -1,4 +1,4 @@
-﻿<div class="modal fade" id="modal-alterar-preco" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block;" aria-modal="true">
+﻿<div class="modal fade" id="modal-alterar-preco" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -8,12 +8,13 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label>Preço</label>
-                    <input class="form-control" type="text" placeholder="Preço" />
+                    <input class="form-control" type="text" placeholder="Preço" name="alterar-preco-preco" />
+                    <input class="form-control" type="hidden" name="alterar-preco-codigo" />
                 </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                <button class="btn btn-primary" type="button">Salvar</button>
+                <button class="btn btn-primary" type="button" id="btn-salvar-alteracao-preco">Salvar</button>
             </div>
         </div>
     </div>

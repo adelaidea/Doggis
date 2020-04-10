@@ -1,4 +1,6 @@
-﻿namespace Doggis.ExecutorsAbstraction.Model.Produto
+﻿using System;
+
+namespace Doggis.ExecutorsAbstraction.Model.Produto
 {
     public class ProdutoModel
     {
@@ -8,5 +10,6 @@
         public decimal Preco { get; set; }
         public bool ParaVenda { get; set; }
         public int Quantidade { get; set; }
+        public Guid FabricanteId { get; set; }
     }
 }

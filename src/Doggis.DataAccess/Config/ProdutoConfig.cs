@@ -16,7 +16,7 @@ namespace Doggis.DataAccess.Config
             builder.Property(x => x.ParaVenda);
             builder.Property(x => x.Preco);
             builder.Property(x => x.Quantidade);
-            builder.Property(x => x.IdFabricante);
+            builder.Property(x => x.FabricanteId);
         }
     }
 }

@@ -21,6 +21,7 @@ namespace Doggis.DataAccess.Context
         public DbSet<Venda> Venda { get; set; }
         public DbSet<Servico> Servico { get; set; }
         public DbSet<AgendaServico> AgendaServico { get; set; }
+        public DbSet<Fabricante> Fabricante { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

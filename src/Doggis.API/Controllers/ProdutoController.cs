@@ -20,6 +20,7 @@ namespace Doggis.API.Controllers
         private readonly IExecutor<EditarPrecoProdutoParameter, EditarPrecoProdutoResult> _editarPrecoProdutoExecutor;
         private readonly IExecutor<AtualizarEstoqueProdutoParameter, AtualizarEstoqueProdutoResult> _editarQuantidadeProdutoExecutor;
         private readonly IExecutor<VendaParameter, VendaResult> _vendaExecutor;
+        private readonly IExecutor<ObterProdutoParameter, ObterProdutoResult> _obterProdutoExecutor;
 
         public ProdutoController(IExecutor<ListarProdutoParameter, ListarProdutoResult> listarProdutoExecutor,
                                     IExecutor<IncluirProdutoParameter, IncluirProdutoResult> incluirProdutoExecutor,
@@ -27,7 +28,8 @@ namespace Doggis.API.Controllers
                                     IExecutor<RemoverProdutoParameter, RemoverProdutoResult> removerProdutoExecutor,
                                     IExecutor<EditarPrecoProdutoParameter, EditarPrecoProdutoResult> editarPrecoProdutoExecutor,
                                     IExecutor<AtualizarEstoqueProdutoParameter, AtualizarEstoqueProdutoResult> editarQuantidadeProdutoExecutor,
-                                    IExecutor<VendaParameter, VendaResult> vendaExecutor)
+                                    IExecutor<VendaParameter, VendaResult> vendaExecutor,
+                                    IExecutor<ObterProdutoParameter, ObterProdutoResult> obterProdutoExecutor)
         {
             _listarProdutoExecutor = listarProdutoExecutor;
             _incluirProdutoExecutor = incluirProdutoExecutor;
@@ -36,6 +38,7 @@ namespace Doggis.API.Controllers
             _editarPrecoProdutoExecutor = editarPrecoProdutoExecutor;
             _editarQuantidadeProdutoExecutor = editarQuantidadeProdutoExecutor;
             _vendaExecutor = vendaExecutor;
+            _obterProdutoExecutor = obterProdutoExecutor;
         }
 
         [HttpGet]
@@ -46,6 +49,22 @@ namespace Doggis.API.Controllers
                 var produtos = await _listarProdutoExecutor.Execute(new ListarProdutoParameter());
 
                 return Ok(produtos.Produtos);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        [HttpGet]
+        [Route("{id?}")]
+        public async Task<IActionResult> Obter(long id)
+        {
+            try
+            {
+                var produto = await _obterProdutoExecutor.Execute(new ObterProdutoParameter { Codigo = id });
+
+                return Ok(produto);
             }
             catch (Exception ex)
             {
@@ -69,7 +88,7 @@ namespace Doggis.API.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Editar(ProdutoModel produto)
+        public async Task<IActionResult> Editar([FromBody]ProdutoModel produto)
         {
             try
             {
@@ -84,11 +103,12 @@ namespace Doggis.API.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Remover(RemoverProdutoParameter parameter)
+        [Route("{id?}")]
+        public async Task<IActionResult> Remover(long id)
         {
             try
             {
-                await _removerProdutoExecutor.Execute(parameter);
+                await _removerProdutoExecutor.Execute(new RemoverProdutoParameter { Codigo = id });
 
                 return Ok();
             }
@@ -99,7 +119,7 @@ namespace Doggis.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> EditarPreco(EditarPrecoProdutoParameter parameter) 
+        public async Task<IActionResult> EditarPreco(EditarPrecoProdutoParameter parameter)
         {
             try
             {
@@ -129,7 +149,7 @@ namespace Doggis.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<IActionResult> RegistrarVenda(VendaParameter parameter) 
+        public async Task<IActionResult> RegistrarVenda(VendaParameter parameter)
         {
             try
             {

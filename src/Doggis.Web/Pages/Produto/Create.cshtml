@@ -5,52 +5,58 @@
 
 <div class="card">
     <div class="card-header"><strong>Produto</strong> Incluir</div>
-    <div class="card-body">
-        <div class="header-button">
-            <button class="btn btn-sm btn-secondary" type="button">
-                <i class="cil-plus"></i>
-            </button>
+    <form>
+        <div class="card-body">
+            <div class="header-button">
+                <button id="add-produto" class="btn btn-sm btn-secondary" type="button">
+                    <i class="cil-plus"></i>
+                </button>
+            </div>
+            <table id="table-novos-produtos" class="table table-responsive-sm">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Fabricante</th>
+                        <th>Quantidade</th>
+                        <th>Especificação</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input name="nome" class="form-control" type="text" placeholder="Nome" />
+                        </td>
+                        <td>
+                            <input name="preco" class="form-control" type="text" placeholder="Preço" />
+                        </td>
+                        <td>
+                            <select class="form-control" name="fabricante">
+                            </select>
+                        </td>
+                        <td>
+                            <input name="quantidade" class="form-control" type="number" placeholder="Quantidade" />
+                        </td>
+                        <td>
+                            <input name="especificacoes" class="form-control" type="text" placeholder="Especificações" />
+                        </td>
+                        <td>
+                            <a class="remover-produto" title="Remover">
+                                <i class="cil-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <table class="table table-responsive-sm">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Preço</th>
-                    <th>Fornecedor</th>
-                    <th>Quantidade</th>
-                    <th>Especificação</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <input class="form-control" type="text" placeholder="Nome" />
-                    </td>
-                    <td>
-                        <input class="form-control" type="text" placeholder="Preço" />
-                    </td>
-                    <td>
-                        <input class="form-control" type="text" placeholder="Fornecedor" />
-                    </td>
-                    <td>
-                        <input class="form-control" type="number" placeholder="Quantidade" />
-                    </td>
-                    <td>
-                        <input class="form-control" type="text" placeholder="Especificação" />
-                    </td>
-                    <td>
-                        <a title="Remover">
-                            <i class="cil-trash"></i>
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="card-footer">
-        <button class="btn btn-sm btn-success" type="submit"> Salvar</button>
-        <button class="btn btn-sm btn-secondary" onclick="location.href = '/produto';" type="button"> Cancelar</button>
-    </div>
+        <div class="card-footer">
+            <button class="btn btn-sm btn-success" type="submit"> Salvar</button>
+            <button class="btn btn-sm btn-secondary" onclick="location.href = '/produto';" type="button"> Cancelar</button>
+        </div>
+    </form>
 </div>
 
+@section Scripts{
+    <script src="~/js/pages/produto/create.js"></script>
+}
