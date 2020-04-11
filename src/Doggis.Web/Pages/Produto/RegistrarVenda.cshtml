@@ -6,27 +6,28 @@
 
 <div class="card">
     <div class="card-header"><strong>Produto</strong> Registar Venda</div>
-    <div class="card-body">
-        <form action="" method="post">
+    <form action="" method="post">
+        <div class="card-body">
             <div class="row">
                 <div class="form-group col-sm-5">
                     <label>Código do Produto</label>
-                    <input class="form-control" type="number" placeholder="Código do Produto" />
+                    <input class="form-control" name="codigo-produto" type="number" placeholder="Código do Produto" />
                 </div>
                 <div class="form-group col-sm-5">
                     <label>Quantidade</label>
-                    <input class="form-control" type="number" placeholder="Quantidade" />
+                    <input class="form-control" type="number" name="quantidade-produto-venda" placeholder="Quantidade" />
                 </div>
                 <div class="form-group col-sm-2">
-                    <button type="button" class="btn btn-sm btn-primary">
+                    <button type="button" id="btn-add-produto" class="btn btn-sm btn-primary" style="margin-top: 14%;">
                         <i class="cil-plus"></i>
                     </button>
                 </div>
             </div>
 
-            <table class="table table-responsive-sm">
+            <table class="table table-responsive-sm" id="tabela-produto-venda">
                 <thead>
                     <tr>
+                        <th class="d-none"></th>
                         <th>Produto</th>
                         <th>Quantidade</th>
                         <th>Preço un</th>
@@ -35,43 +36,20 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Samppa Nori</td>
-                        <td>2012/01/01</td>
-                        <td>Member</td>
-                        <td>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Estavan Lykos</td>
-                        <td>2012/02/01</td>
-                        <td>Staff</td>
-                        <td><span class="badge badge-danger">Banned</span></td>
-                    </tr>
-                    <tr>
-                        <td>Chetan Mohamed</td>
-                        <td>2012/02/01</td>
-                        <td>Admin</td>
-                        <td><span class="badge badge-secondary">Inactive</span></td>
-                    </tr>
-                    <tr>
-                        <td>Derick Maximinus</td>
-                        <td>2012/03/01</td>
-                        <td>Member</td>
-                        <td><span class="badge badge-warning">Pending</span></td>
-                    </tr>
-                    <tr>
-                        <td>Friderik Dávid</td>
-                        <td>2012/01/21</td>
-                        <td>Staff</td>
-                        <td><span class="badge badge-success">Active</span></td>
+                        <td align="right" colspan="3" style="font-weight:bold;">Total:</td>
+                        <td class="valor-total" style="font-weight:bold;"></td>
                     </tr>
                 </tbody>
             </table>
-        </form>
-    </div>
-    <div class="card-footer">
-        <button class="btn btn-sm btn-success" type="submit"> Finalizar Compra</button>
-        <button class="btn btn-sm btn-secondary" onclick="location.href = '/produto';" type="button"> Cancelar</button>
-    </div>
+
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-sm btn-success" type="submit"> Finalizar Compra</button>
+            <button class="btn btn-sm btn-secondary" onclick="location.href = '/produto';" type="button"> Cancelar</button>
+        </div>
+    </form>
 </div>
 
+@section Scripts{
+    <script src="~/js/pages/produto/registrarVenda.js"></script>
+}

@@ -57,7 +57,22 @@ namespace Doggis.API.Controllers
         }
 
         [HttpGet]
-        [Route("{id?}")]
+        public async Task<IActionResult> ListarProdutosParaVenda()
+        {
+            try
+            {
+                var produtos = await _listarProdutoExecutor.Execute(new ListarProdutoParameter());
+
+                return Ok(produtos.Produtos);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        [HttpGet]
+        [Route("{id}")]
         public async Task<IActionResult> Obter(long id)
         {
             try
@@ -148,7 +163,7 @@ namespace Doggis.API.Controllers
             }
         }
 
-        [HttpPatch]
+        [HttpPost]
         public async Task<IActionResult> RegistrarVenda(VendaParameter parameter)
         {
             try
