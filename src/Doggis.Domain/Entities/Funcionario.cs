@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Doggis.Domain.Entities
 {
@@ -13,5 +14,9 @@ namespace Doggis.Domain.Entities
         public string CPF { get; set; }
 
         public string Registro { get; set; }
+
+        public virtual IEnumerable<FuncionarioServico> Servicos { get; set; }
+
+        public virtual IEnumerable<FuncionarioTipoPet> TiposPet { get; set; }
     }
 }

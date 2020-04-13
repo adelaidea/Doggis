@@ -17,7 +17,7 @@ namespace Doggis.DataAccess.Config
             builder.Property(x => x.Nome);
             builder.Property(x => x.MinDuracao);
             builder.Property(x => x.Preco);
-            builder.Property(x => x.PontosRealizavao);
+            builder.Property(x => x.PontosRealizacao);
         }
     }
 }

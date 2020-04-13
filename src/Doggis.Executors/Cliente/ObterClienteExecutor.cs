@@ -1,17 +1,21 @@
-﻿using Doggis.Domain.IRepository;
+﻿using AutoMapper;
+using Doggis.Domain.IRepository;
 using Doggis.ExecutorsAbstraction.Abstraction;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Parameters.Cliente;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Results.Cliente;
+using Doggis.ExecutorsAbstraction.Model.Cliente;
 using System.Threading.Tasks;
 
 namespace Doggis.Executors.Cliente
 {
     public class ObterClienteExecutor : IExecutor<ObterClienteParameter, ObterClienteResult>
     {
+        private readonly IMapper _mapper;
         private readonly IClienteRepository _clienteRepository;
 
-        public ObterClienteExecutor(IClienteRepository clienteRepository)
+        public ObterClienteExecutor(IClienteRepository clienteRepository, IMapper mapper)
         {
+            _mapper = mapper;
             _clienteRepository = clienteRepository;
         }
 
@@ -21,11 +25,7 @@ namespace Doggis.Executors.Cliente
 
             return new ObterClienteResult
             {
-                CPF = cliente.CPF,
-                Email = cliente.Email,
-                Endereco = cliente.Endereco,
-                Nome = cliente.Nome,
-                RG = cliente.RG
+                Cliente = _mapper.Map<ClienteModel>(cliente)
             };
         }
     }

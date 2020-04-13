@@ -38,6 +38,6 @@ namespace Doggis.Domain.Entities
 
         public int PontosAcumulados { get; protected set; }
 
-        public IEnumerable<Pet> Pet { get; set; }
+        public virtual IEnumerable<Pet> Pet { get; set; }
     }
 }

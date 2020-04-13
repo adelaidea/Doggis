@@ -7,7 +7,7 @@ namespace Doggis.Domain.Entities
     {
         public Guid Id { get; protected set; }
 
-        public int IdRaca { get; set; }
+        public int RacaId { get; set; }
 
         public string Nome { get; set; }
 
@@ -17,12 +17,10 @@ namespace Doggis.Domain.Entities
 
         public bool PermiteDivulgacao { get; set; }
 
-        public Guid IdCliente { get; set; }
+        public Guid ClienteId { get; set; }
 
-        public TipoPet TipoPet { get; set; }
+        public virtual Raca Raca { get; set; }
 
-        public Raca Raca { get; set; }
-
-        public IEnumerable<AlergiaPet> Alergias { get; set; }
+        public virtual IEnumerable<AlergiaPet> Alergias { get; set; }
     }
 }

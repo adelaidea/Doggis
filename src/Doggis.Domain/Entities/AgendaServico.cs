@@ -22,12 +22,12 @@ namespace Doggis.Domain.Entities
 
         public bool Cancelado { get; set; }
 
-        public Cliente Cliente { get; set; }
+        public virtual Cliente Cliente { get; set; }
 
-        public Servico Servico { get; set; }
+        public virtual Servico Servico { get; set; }
 
-        public Pet Pet { get; set; }
+        public virtual Pet Pet { get; set; }
 
-        public Funcionario Funcionario { get; set; }
+        public virtual Funcionario Funcionario { get; set; }
     }
 }

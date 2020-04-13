@@ -17,6 +17,15 @@ namespace Doggis.DataAccess.Config
             builder.Property(x => x.Registro);
             builder.Property(x => x.RG).IsRequired();
             builder.Property(x => x.CPF).IsRequired();
+
+            builder.HasMany(x => x.Servicos)
+                    .WithOne()
+                    .HasForeignKey(x => x.FuncionarioId);
+
+
+            builder.HasMany(x => x.TiposPet)
+                    .WithOne()
+                    .HasForeignKey(x => x.FuncionarioId);
         }
     }
 }

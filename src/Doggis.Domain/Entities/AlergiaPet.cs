@@ -8,8 +8,8 @@ namespace Doggis.Domain.Entities
 
         public int IdAlergia { get; set; }
 
-        public Pet Pet { get; set; }
+        public virtual Pet Pet { get; set; }
 
-        public Alergia Alergia { get; set; }
+        public virtual Alergia Alergia { get; set; }
     }
 }

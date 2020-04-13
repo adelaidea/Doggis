@@ -3,14 +3,20 @@ using Doggis.DataAccess.Repository;
 using Doggis.Domain.IRepository;
 using Doggis.Executors.Cliente;
 using Doggis.Executors.Fabricante;
+using Doggis.Executors.Funcionario;
+using Doggis.Executors.Pet;
 using Doggis.Executors.Produto;
 using Doggis.Executors.Servico;
 using Doggis.ExecutorsAbstraction.Abstraction;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Parameters.Cliente;
+using Doggis.ExecutorsAbstraction.ExecutorsTypes.Parameters.Funcionario;
+using Doggis.ExecutorsAbstraction.ExecutorsTypes.Parameters.Pet;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Parameters.Produto;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Parameters.Servico;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Results.Cliente;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Results.Fabricante;
+using Doggis.ExecutorsAbstraction.ExecutorsTypes.Results.Funcionario;
+using Doggis.ExecutorsAbstraction.ExecutorsTypes.Results.Pet;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Results.Produto;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Results.Servico;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +34,8 @@ namespace Doggis.Application.IoC
             services.AddScoped<IVendaRepository, VendaRepository>();
             services.AddScoped<IServicoRepository, ServicoRepository>();
             services.AddScoped<IFabricanteRepository, FabricanteRepository>();
+            services.AddScoped<IPetRepository, PetRepository>();
+            services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
         }
 
         public static void RegisterExecutor(this IServiceCollection services)
@@ -46,6 +54,11 @@ namespace Doggis.Application.IoC
             services.AddScoped<IExecutor<AgendarServicoParameter, AgendarServicoResult>, AgendarServicoExecutor>();
             services.AddScoped<IExecutor<ObterServicosAgendadosParameter, ObterServicosAgendadosResult>, ObterServicosAgendadosExecutor>();
             services.AddScoped<IExecutor<ListarFabricanteResult>, ListarFabricanteExecutor>();
+            services.AddScoped<IExecutor<ListarClienteResult>, ListarClienteExecutor>();
+            services.AddScoped<IExecutor<ListarPetsPorClienteParameter, ListarPetsPorClienteResult>, ListarPetsPorClienteExecutor>();
+            services.AddScoped<IExecutor<ListarServicoResult>, ListarServicoExecutor>();
+            services.AddScoped<IExecutor<ListarFuncionarioPorTipoPetEServicoParameter, ListarFuncionarioPorTipoPetEServicoResult>, ListarFuncionarioPorTipoPetEServicoExecutor>();
+            services.AddScoped<IExecutor<ObterHorariosProfissionalParameter, ObterHorariosProfissionalResult>, ObterHorariosProfissionalExecutor>();
         }
 
         public static void AddDoggisContext(this IServiceCollection services, IConfiguration Configuration)

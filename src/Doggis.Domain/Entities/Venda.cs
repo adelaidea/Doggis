@@ -19,6 +19,6 @@ namespace Doggis.Domain.Entities
 
         public virtual Funcionario FuncionarioVenda { get; set; }
 
-        public IEnumerable<ItemVenda> Itens { get; set; }
+        public virtual IEnumerable<ItemVenda> Itens { get; set; }
     }
 }

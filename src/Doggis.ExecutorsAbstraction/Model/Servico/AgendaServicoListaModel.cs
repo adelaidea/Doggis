@@ -20,7 +20,7 @@ namespace Doggis.ExecutorsAbstraction.Model.Servico
 
         public string ClienteNome { get; set; }
 
-        public DateTime DataRealizacao { get; set; }
+        public string DataRealizacao { get; set; }
 
         public bool Cancelado { get; set; }
     }

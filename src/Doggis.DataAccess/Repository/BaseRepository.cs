@@ -4,13 +4,14 @@ using Doggis.Domain.IRepository;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Doggis.DataAccess.Repository
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : EntityBase
     {
-        private readonly DoggisContext _dbContext;
+        public DoggisContext _dbContext;
 
         public BaseRepository(DoggisContext dbContext)
         {
@@ -43,7 +44,7 @@ namespace Doggis.DataAccess.Repository
 
         public virtual async Task<IEnumerable<TEntity>> Find(System.Linq.Expressions.Expression<Func<TEntity, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Set<TEntity>().Where(predicate).ToListAsync();
         }
 
         public virtual async Task<TEntity> Get(object id)

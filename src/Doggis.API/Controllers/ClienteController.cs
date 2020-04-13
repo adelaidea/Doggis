@@ -7,18 +7,36 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Doggis.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ClienteController : ControllerBase
     {
         private readonly IExecutor<IncluirClienteParameter, IncluirClienteResult> _incluirClienteExecutor;
         private readonly IExecutor<ObterClienteParameter, ObterClienteResult> _obterClienteExecutor;
+        private readonly IExecutor<ListarClienteResult> _listarClienteExecutor;
 
         public ClienteController(IExecutor<IncluirClienteParameter, IncluirClienteResult> incluirClienteExecutor,
-                                    IExecutor<ObterClienteParameter, ObterClienteResult> obterClienteExecutor)
+                                    IExecutor<ObterClienteParameter, ObterClienteResult> obterClienteExecutor,
+                                    IExecutor<ListarClienteResult> listarClienteExecutor)
         {
             _incluirClienteExecutor = incluirClienteExecutor;
             _obterClienteExecutor = obterClienteExecutor;
+            _listarClienteExecutor = listarClienteExecutor;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Listar() 
+        {
+            try
+            {
+                var clientes = await _listarClienteExecutor.Execute();
+
+                return Ok(clientes);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpPost]

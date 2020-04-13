@@ -11,12 +11,8 @@ namespace Doggis.DataAccess.Repository
 {
     public class ServicoRepository : BaseRepository<Servico>, IServicoRepository
     {
-        private readonly DoggisContext _dbContext;
-
-        public ServicoRepository(DoggisContext dbContext) : base(dbContext)
-        {
-            _dbContext = dbContext;
-        }
+        public ServicoRepository(DoggisContext dbContext)
+            : base(dbContext) { }
 
         public async Task AgendarServico(AgendaServico agendaServico)
         {
@@ -26,7 +22,7 @@ namespace Doggis.DataAccess.Repository
 
         public async Task<IEnumerable<AgendaServico>> ObterServicosAgendadosDia(DateTime data)
         {
-           var retorno = await _dbContext.AgendaServico.Where(x => x.DataRealizacao.Date == data.Date).ToListAsync();
+            var retorno = await _dbContext.AgendaServico.Where(x => x.DataRealizacao.Date == data.Date).ToListAsync();
 
             return retorno;
         }

@@ -3,7 +3,6 @@
     ViewData["Title"] = "Agenda";
 }
 
-
 <div class="card">
     <div class="card-header"><strong>Serviço</strong> Agenda</div>
     <div class="card-body">
@@ -32,7 +31,7 @@
                 </div>
             </div>
 
-            <table class="table table-responsive-sm">
+            <table class="table table-responsive-sm" id="servicos-agendados">
                 <thead>
                     <tr>
                         <th>Cliente</th>
@@ -42,41 +41,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Samppa Nori</td>
-                        <td>2012/01/01</td>
-                        <td>Member</td>
-                        <td>
-                           
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Estavan Lykos</td>
-                        <td>2012/02/01</td>
-                        <td>Staff</td>
-                        <td><span class="badge badge-danger">Banned</span></td>
-                    </tr>
-                    <tr>
-                        <td>Chetan Mohamed</td>
-                        <td>2012/02/01</td>
-                        <td>Admin</td>
-                        <td><span class="badge badge-secondary">Inactive</span></td>
-                    </tr>
-                    <tr>
-                        <td>Derick Maximinus</td>
-                        <td>2012/03/01</td>
-                        <td>Member</td>
-                        <td><span class="badge badge-warning">Pending</span></td>
-                    </tr>
-                    <tr>
-                        <td>Friderik Dávid</td>
-                        <td>2012/01/21</td>
-                        <td>Staff</td>
-                        <td><span class="badge badge-success">Active</span></td>
-                    </tr>
                 </tbody>
             </table>
         </form>
     </div>
 </div>
 
+@section Scripts{
+    <script src="~/js/pages/agenda/index.js"></script>
+}

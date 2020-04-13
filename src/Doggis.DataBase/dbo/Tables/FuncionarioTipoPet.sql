@@ -1,13 +1,13 @@
 ﻿CREATE TABLE [dbo].[FuncionarioTipoPet] (
-    [IdFuncionario] UNIQUEIDENTIFIER NOT NULL,
-    [IdTipoPet]     int NOT NULL,
-    CONSTRAINT [PK_FUNCIONARIOTIPOPET] PRIMARY KEY CLUSTERED ([IdFuncionario] ASC, [IdTipoPet] ASC),
-    CONSTRAINT [FK_FUNCIONA_ASSOCIATI_FUNCINAR] FOREIGN KEY ([IdFuncionario]) REFERENCES [dbo].[Funcionario] ([Id]),
-    CONSTRAINT [FK_FUNCIONA_ASSOCIATI_TIPOPET] FOREIGN KEY ([IdTipoPet]) REFERENCES [dbo].[TipoPet] ([Id])
+    [FuncionarioId] UNIQUEIDENTIFIER NOT NULL,
+    [TipoPetId]     int NOT NULL,
+    CONSTRAINT [PK_FUNCIONARIOTIPOPET] PRIMARY KEY CLUSTERED ([FuncionarioId] ASC, [TipoPetId] ASC),
+    CONSTRAINT [FK_FUNCIONA_ASSOCIATI_FUNCINAR] FOREIGN KEY ([FuncionarioId]) REFERENCES [dbo].[Funcionario] ([Id]),
+    CONSTRAINT [FK_FUNCIONA_ASSOCIATI_TIPOPET] FOREIGN KEY ([TipoPetId]) REFERENCES [dbo].[TipoPet] ([Id])
 );
 
 
 GO
 CREATE NONCLUSTERED INDEX [ASSOCIATION_4_FK]
-    ON [dbo].[FuncionarioTipoPet]([IdFuncionario] ASC);
+    ON [dbo].[FuncionarioTipoPet]([FuncionarioId] ASC);
 

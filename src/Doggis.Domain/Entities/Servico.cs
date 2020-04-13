@@ -14,7 +14,7 @@ namespace Doggis.Domain.Entities
 
         public bool Ativo { get; set; }
 
-        public int PontosRealizavao { get; set; }
+        public int PontosRealizacao { get; set; }
 
     }
 }
