@@ -4,6 +4,7 @@ using Doggis.Domain.IRepository;
 using Doggis.ExecutorsAbstraction.Abstraction;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Parameters.Servico;
 using Doggis.ExecutorsAbstraction.ExecutorsTypes.Results.Servico;
+using System;
 using System.Threading.Tasks;
 
 namespace Doggis.Executors.Servico
@@ -21,6 +22,9 @@ namespace Doggis.Executors.Servico
 
         public async Task<AgendarServicoResult> Execute(AgendarServicoParameter parameter)
         {
+            if (parameter.AgendaServico.DataRealizacao < DateTime.Now)
+                throw new Exception("Data de agendamento deve ser superior à data atual");
+
             var agendaServico = _mapper.Map<AgendaServico>(parameter.AgendaServico);
 
             await _servicoRepository.AgendarServico(agendaServico);

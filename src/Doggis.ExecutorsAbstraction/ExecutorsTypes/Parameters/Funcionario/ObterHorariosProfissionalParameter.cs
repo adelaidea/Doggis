@@ -7,5 +7,7 @@ namespace Doggis.ExecutorsAbstraction.ExecutorsTypes.Parameters.Funcionario
         public Guid FuncionarioId { get; set; }
 
         public DateTime Dia { get; set; }
+
+        public Guid ServicoId { get; set; }
     }
 }

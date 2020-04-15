@@ -13,12 +13,15 @@ namespace Doggis.API.Controllers
     {
         private readonly IExecutor<ObterServicosAgendadosParameter, ObterServicosAgendadosResult> _obterServicosAgendadosExecutor;
         private readonly IExecutor<ListarServicoResult> _listarServicoExecutor;
+        private readonly IExecutor<AgendarServicoParameter, AgendarServicoResult> _agendarServicoExecutor;
 
         public ServicoController(IExecutor<ObterServicosAgendadosParameter, ObterServicosAgendadosResult> obterServicosAgendadosExecutor,
-                                    IExecutor<ListarServicoResult> listarServicoExecutor)
+                                    IExecutor<ListarServicoResult> listarServicoExecutor,
+                                    IExecutor<AgendarServicoParameter, AgendarServicoResult> agendarServicoExecutor)
         {
             _obterServicosAgendadosExecutor = obterServicosAgendadosExecutor;
             _listarServicoExecutor = listarServicoExecutor;
+            _agendarServicoExecutor = agendarServicoExecutor;
         }
 
         [HttpGet]
@@ -51,6 +54,21 @@ namespace Doggis.API.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AgendarServico(AgendarServicoParameter parameter) 
+        {
+            try
+            {
+                await _agendarServicoExecutor.Execute(parameter);
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
     }

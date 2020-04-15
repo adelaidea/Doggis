@@ -43,6 +43,46 @@
     $('select[name ="servico"]').change(function () {
         PreencherComboProfissional(url);
     });
+
+    $('select[name ="profissional"]').change(function () {
+        PreencherHorariosDisponiveis(url);
+    });
+
+    $('input[name ="data"]').change(function () {
+        PreencherHorariosDisponiveis(url);
+    });
+
+    $("form").submit(function (e) {
+        e.preventDefault();
+
+        var parameter = {
+            ClienteId: $('select[name ="cliente"]').val(),
+            ServicoId: $('select[name ="servico"]').val(),
+            FuncionarioId: $('select[name ="profissional"]').val(),
+            PetId: $('select[name ="pet"]').val(),
+            DataRealizacao: $('input[name ="data"]').val(),
+            Horario: $('select[name ="horario"]').val(),
+        };
+
+        var model = {
+            agendaServico: parameter
+        };
+
+        $.ajax({
+            url: url + 'Servico/AgendarServico',
+            data: JSON.stringify(model),
+            type: 'Post',
+            contentType: "application/json; charset=utf8",
+            success: function () {
+                alert("Serviço agendado com sucesso.");
+                location.reload();
+            },
+            error: function (error) {
+                console.log(error)
+                alert(error.responseText);
+            }
+        });
+    });
 });
 
 function PreencherComboProfissional(url) {
@@ -62,3 +102,23 @@ function PreencherComboProfissional(url) {
         });
     }
 };
+
+function PreencherHorariosDisponiveis(url) {
+
+    var selectbox = $('select[name ="horario"]');
+    selectbox.find('option').remove();
+
+    var dia = $('input[name ="data"]').val();
+    var servico = $('select[name ="servico"]').val();
+    var profissional = $('select[name ="profissional"]').val();
+
+    if (dia !== "" && servico !== "" && profissional !== "") {
+        $.get(url + "Funcionario/ObterHorariosProfissional?funcionarioId=" + profissional + "&servicoId=" + servico + "&dia=" + dia, function (data) {
+            var horarios = data.horarios;
+
+            $.each(horarios, function (i, d) {
+                $('<option>').val(d).text(d).appendTo(selectbox);
+            });
+        });
+    }
+}

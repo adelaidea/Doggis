@@ -16,7 +16,7 @@ namespace Doggis.DataAccess.Repository
 
         public async Task AgendarServico(AgendaServico agendaServico)
         {
-            _dbContext.Add<AgendaServico>(agendaServico);
+            _dbContext.Add(agendaServico);
             await _dbContext.SaveChangesAsync();
         }
 

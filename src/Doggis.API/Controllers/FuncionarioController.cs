@@ -37,11 +37,13 @@ namespace Doggis.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> ObterHorariosProfissional(Guid idProfissional, DateTime dia)
+        public async Task<IActionResult> ObterHorariosProfissional(Guid funcionarioId, Guid servicoId, DateTime dia)
         {
             try
             {
-                return Ok();
+                var horarios = await _obterHorariosProfissionalExecutor.Execute(new ObterHorariosProfissionalParameter { Dia = dia, FuncionarioId = funcionarioId, ServicoId = servicoId });
+
+                return Ok(horarios);
             }
             catch (Exception ex)
             {

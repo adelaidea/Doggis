@@ -26,7 +26,7 @@ namespace Doggis.Executors.Funcionario
             var funcionarios = await _funcionarioRepository.Find(x => x.TiposPet.Any(tp => tp.TipoPetId == parameter.TipoPetId) &&
                                                                         x.Servicos.Any(s => s.ServicoId == parameter.ServicoId));
 
-            return new ListarFuncionarioPorTipoPetEServicoResult { Funcionarios = _mapper.Map<IEnumerable<FuncionarioModel>>(funcionarios) };
+            return new ListarFuncionarioPorTipoPetEServicoResult { Funcionarios = _mapper.Map<IEnumerable<FuncionarioModel>>(funcionarios).OrderBy(x => x.Nome) };
         }
     }
 }
